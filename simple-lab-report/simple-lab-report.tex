@@ -1,0 +1,102 @@
+% !TeX program = xelatex
+
+% LaTeX Lab Rept Template %
+% From: https://www.dur.ac.uk/resources/physics/students/assessment/LatexExampleLabReportTemplate.tex %
+% JRM downloaded 2019-04-24, Last Modified: 2019-12-02 %
+%
+% NOTE -0 this uses an internal bibiography
+%
+
+\documentclass[12pt, onecolumn]{revtex4}    % Font size (10,11 or 12pt) and column number (one or two).
+
+\usepackage{times}                          % Times New Roman font type
+
+\usepackage[a4paper, left=1.85cm, right=1.85cm,
+ top=1.85cm, bottom=1.85cm]{geometry}       % Defines paper size and margin length
+
+\usepackage[font=small,
+labelfont=bf]{caption}                      % Defines caption font size as 9pt and caption title bolded
+
+
+\usepackage{graphics,graphicx,epsfig,ulem}  % Makes sure all graphics works
+\usepackage{amsmath}                        % Adds mathematical features for equations
+
+\usepackage{etoolbox}                       % Customise date to preferred format
+\makeatletter
+\patchcmd{\frontmatter@RRAP@format}{(}{}{}{}
+\patchcmd{\frontmatter@RRAP@format}{)}{}{}{}
+\renewcommand\Dated@name{}
+\makeatother
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}                         % Insert header
+\renewcommand{\headrulewidth}{0pt}
+\lhead{A. Student}                        % Your name
+\rhead{Example Lab Report Title}          % Your report title
+
+\def\bibsection{\section*{References}}    % Position refernce section correctly
+
+
+%%%%% Document %%%%%
+\begin{document}                     
+
+
+\title{Example Lab Report} 
+\date{Submitted: \today{}, Date of Experiment: EXPERIMENT DATE}
+\author{A. Student (and L. Partner)}
+\affiliation{\normalfont L1 Discovery Labs, Lab Group XXX, Lab Day}
+
+\begin{abstract}              
+ 
+ABSTRACT HERE
+
+\end{abstract}
+
+\maketitle
+\thispagestyle{plain} % produces page number for front page
+
+
+
+\section{Introduction} 
+
+Paragraph one
+
+Paragraph two
+
+
+\section{Methods} 
+
+Paragraph one
+
+Paragraph two
+ 
+\section{Results} 
+
+Paragraph one
+
+Paragraph two
+
+\section{Discussion} 
+
+Paragraph one
+
+Paragraph two
+
+\section{Conclusions}
+ 
+Some awesome
+
+\begin{acknowledgments}
+(OPTIONAL) The author would like to thank...
+\end{acknowledgments}
+
+\begin{thebibliography}{}
+
+\bibitem{ref01} A. N. Other, Title of the Book, edition, publishers, place of publication (year of publication), p. 123.   % example reference 
+
+
+\end{thebibliography} 
+
+
+\end{document}

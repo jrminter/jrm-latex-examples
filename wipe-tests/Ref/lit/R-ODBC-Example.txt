@@ -1,0 +1,25 @@
+http://www.statmethods.net/input/dbinterface.html
+
+ODBC INTERFACE
+
+The RODBC package provides access to databases (including Microsoft Access and Microsoft SQL Server) through an ODBC interface.
+
+The primary functions are given below.
+
+Function	Description
+odbcConnect(dsn, uid="", pwd="")	Open a connection to an ODBC database
+sqlFetch(channel, sqtable)	Read a table from an ODBC database into a dataframe
+sqlQuery(channel, query)	Submit a query to an ODBC database and return the results
+sqlSave(channel, mydf, tablename = sqtable, append = FALSE)	Write or update (append=True) a dataframe to a table in the ODBC database
+sqlDrop(channel, sqtable)	Remove a table from the ODBC database
+close(channel)	Close the connection
+# RODBC Example
+# import 2 tables (Crime and Punishment) from a DBMS
+# into R dataframes (and call them crimedat and pundat)
+
+library(RODBC)
+myconn <-odbcConnect("mydsn", uid="Rob", pwd="aardvark")
+crimedat <- sqlFetch(myconn, Crime)
+pundat <- sqlQuery(myconn, "select * from Punishment")
+close(myconn)
+
