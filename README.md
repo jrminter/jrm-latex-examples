@@ -1,2 +1,3 @@
 # jrm-latex-examples
-Example LaTeX documentd
+
+Example LaTeX documents
