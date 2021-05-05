@@ -1,0 +1,79 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a XeLaTeX document using the "article" class,
+% with the fontspec package to easily select fonts.
+
+
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
+\setmainfont{Charis SIL} % set the main body font (\textrm), assumes Charis SIL is installed
+\setsansfont{DejaVuSans} %  A nice sans font
+\setmonofont{DejaVuSansMono} % A nice sans mono font
+
+
+
+% other LaTeX packages.....
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper, portrait, margin=1.0in} % or letterpaper (US) or a5paper or....
+%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx} % support the \includegraphics command and options
+
+
+% Path in Windows format:
+% \graphicspath{ {c:/user/images/} }
+
+% Note: The Overleaf site is helpful
+% https://www.overleaf.com/learn/latex/Inserting_Images#The_folder_path_to_images
+
+
+\title{A Brief Article}
+\author{John R. Minter}
+\date{2021-05-04} % Activate to display a given date or no date (if empty), otherwise the current date is printed  \today works
+
+% C:\Users\johnr\OneDrive\Documents\writing\charis-sil-test
+
+% Path in Windows format:
+\graphicspath{ {C:/Users/johnr/OneDrive/Documents/writing/charis-sil-test/} }
+
+
+\begin{document}
+
+\maketitle
+
+
+Some text
+
+
+
+\section{One}
+
+Foo
+
+
+
+\subsection{\emph{One}} % \emph -> italics
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{PhD-debugging-sn.png}
+	\caption{Debugging Fun}
+\end{figure}
+
+Another paragraph of text \ldots
+
+
+
+
+
+
+
+\end{document}
+
+
+
