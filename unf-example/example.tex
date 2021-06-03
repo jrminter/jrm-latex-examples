@@ -1,13 +1,14 @@
-\documentstyle{article}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{biblatex}
+\addbibresource{sample.bib}
+
 \begin{document}
+Let's cite! The Einstein's journal paper \cite{einstein} and the Dirac's 
+book \cite{dirac} are physics related items. 
 
-\bibliographystyle{prsty} % Choose Phys. Rev. style for bibliography
-
-\section{Introduction}
-The discovery of the Quantised Hall Effect was made by
-Klitzing~\cite{qhe} for which he was awarded the 1985 Nobel
-prize for physics~\cite{nobel}.
-
-\bibliography{qhe}        % qhe.bib is the name of our database
+\printbibliography
 
 \end{document}
